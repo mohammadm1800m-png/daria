@@ -6,6 +6,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1B2A41">
 <title>DARIA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%231B2A41'/%3E%3C/svg%3E">
+<script>
+(function(){
+const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#1B2A41"/><g transform="translate(-140,-88) scale(0.665)"><g fill="#ffffff"><path d="M533,380 L533,282 Q533,238 572,242 L800,355 Q847,382 847,432 L847,708 L765,636 L765,465 Q765,435 740,418 L607,338 Z"/><path d="M346,715 L346,556 Q346,506 400,470 L606,358 L607,585 L537,592 L537,465 L450,518 Q422,536 422,566 L422,646 Z"/><path d="M338,760 Q596,464 853,760 L768,760 Q596,554 425,760 Z"/></g><circle cx="596" cy="740" r="57" fill="#C8A96A"/></g></svg>';
+const img=new Image();
+img.onload=function(){
+const mk=s=>{const c=document.createElement('canvas');c.width=c.height=s;c.getContext('2d').drawImage(img,0,0,s,s);return c.toDataURL('image/png')};
+const p192=mk(192),p512=mk(512);
+const add=(rel,href,sz)=>{const l=document.createElement('link');l.rel=rel;l.href=href;if(sz)l.setAttribute('sizes',sz);document.head.appendChild(l)};
+add('icon',p192,'192x192');add('apple-touch-icon',p192,'180x180');
+const base=location.href.split('#')[0].split('?')[0].replace(/[^/]*$/,'');
+const m={name:'DARIA',short_name:'DARIA',start_url:base,scope:base,display:'standalone',background_color:'#1B2A41',theme_color:'#1B2A41',lang:'ar',dir:'rtl',icons:[{src:p192,sizes:'192x192',type:'image/png'},{src:p512,sizes:'512x512',type:'image/png',purpose:'any'}]};
+add('manifest','data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m)));
+};
+img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+})();
+</script>
 <style>
 :root{--navy:#1B2A41;--gold:#C8A96A;--bg:#F4F5F7;--line:#DDE1E7;--muted:#5B6678;--ok:#1E7B45;--okb:#E3F4EA;--warn:#7A5600;--warnb:#FFF4D6;--bad:#B3261E;--badb:#FCE4E2;--off:#4A5260;--offb:#E6E8EC;--info:#1F4E8C;--infob:#E4ECF8}
 *{box-sizing:border-box}
